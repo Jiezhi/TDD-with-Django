@@ -19,8 +19,7 @@ class NewVisitorTest(unittest.TestCase):
         self.browser.quit()
 
     def test_start(self):
-        self.browser.get('http://localhost:8000/credit/test/')
-        self.assertIn('Django', self.browser.title)
+        self.browser.get('http://localhost:8000')
         header_text = self.browser.find_element_by_tag_name('h1').text
         self.assertIn('To-Do', header_text)
 
